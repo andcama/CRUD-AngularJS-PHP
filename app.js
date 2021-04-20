@@ -26,7 +26,11 @@ app.controller('crudController', function($scope, $http){
 	};
 
 	$scope.addData = function(){
-		$scope.modalTitle = 'Add Data';
+		$scope.nombre = "";
+		$scope.correo = "";
+		$scope.edad = "";
+		$scope.puesto = "";
+		$scope.modalTitle = 'Agregar Datos';
 		$scope.submit_button = 'Insertar';
 		$scope.openModal();
 	};
