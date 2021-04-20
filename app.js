@@ -117,6 +117,7 @@ app.controller('crudController', function($scope, $http){
 				'Your file has been deleted.',
 				'success'
 			  )
+			  $scope.fetchData();
 			}
 			
 		  })
