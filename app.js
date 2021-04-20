@@ -27,12 +27,12 @@ app.controller('crudController', function($scope, $http){
 
 	$scope.addData = function(){
 		$scope.modalTitle = 'Add Data';
-		$scope.submit_button = 'Insert';
+		$scope.submit_button = 'Insertar';
 		$scope.openModal();
 	};
 
 	$scope.submitForm = function(){
-		if ($scope.submit_button == "Insert") {
+		if ($scope.submit_button == "Insertar") {
 			$http({
 				method:'POST',
 				 url:"http://127.0.0.1:80/crud/api/create.php",
@@ -55,7 +55,7 @@ app.controller('crudController', function($scope, $http){
 				}
 			});
 		} else {
-			if ($scope.submit_button == "Edit") {
+			if ($scope.submit_button == "Editar") {
 				
 				$http({
 					method:'POST',
@@ -90,7 +90,7 @@ app.controller('crudController', function($scope, $http){
 			$scope.puesto = data.puesto;
 			$scope.hidden_id = id;
 			$scope.modalTitle = 'Editar Datos';
-			$scope.submit_button = 'Edit';
+			$scope.submit_button = 'Editar';
 			$scope.openModal();
 		});		
 	};
